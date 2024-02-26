@@ -40,7 +40,7 @@ export default function Cart() {
                         let totalPrice=0
                         cartItems.forEach(async(item)=>{
                             console.log(item)
-                            const res= await axios.post("https://buldr-backend.onrender.com/order",{
+                            const res= await axios.post("http://localhost:8081/order",{
                                 "userID": item.userID,
                                 "postID": item.postID,
                                 "customerName": name,
