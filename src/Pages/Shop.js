@@ -3,11 +3,12 @@ import { Typography, Box, CircularProgress } from "@mui/material";
 import LaundryItem from "../Components/LaundryItem";
 import axios from "axios";
 export default function Shop() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const getData = async () => {
+    console.log("hello")
     setLoading(true);
-    const res = await axios.get("http://54.252.165.71:8081/posts/marketplace");
+    const res = await axios.get("http://localhost:8081/posts/marketplace");
     console.log(res.data);
     setData(res.data);
     setLoading(false);
@@ -15,6 +16,19 @@ export default function Shop() {
   useEffect(() => {
     getData();
   }, []);
+  if(loading)  return (<Box
+  sx={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100vw",
+    minHeight: "100vh",
+    backgroundColor: "#f4f4f4",
+    marginTop: { md: "7vh" },
+  }}
+><CircularProgress/></Box>)
+
   return (
     <Box
       sx={{

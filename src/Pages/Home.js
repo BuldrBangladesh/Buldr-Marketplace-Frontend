@@ -71,7 +71,7 @@ export default function Home() {
         }}
       >
         <Typography variant="h3" color="primary">
-          Naksha
+          Buldr Marketplace
         </Typography>
         <Typography>
           Welcome to the best engineering product marketplace in Bangladesh

@@ -7,7 +7,8 @@ import Home from "./Pages/Home";
 import Appbar from "./Components/Appbar";
 import Cart from "./Pages/Cart";
 import Account from "./Pages/Account";
-// import Shop from "./Pages/Shop";
+import Shop from "./Pages/Shop";
+
 
 const customTheme = createTheme({
   palette: {},
@@ -36,7 +37,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/account" exact component={Account} />
-            {/*<Route path="/shop" exact component={Shop} />*/}
+            <Route path="/shop" exact component={Shop} />
             <Route path="/cart" exact component={Cart} /> 
           </Switch>
           <Appbar />
