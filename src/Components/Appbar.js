@@ -48,10 +48,10 @@ export default function Appbar() {
                     {active===2 ? <Typography color="primary">Cart</Typography> :<Typography>Cart</Typography>}
 
                 </Button>
-                <Button onClick={AccountClick} color="inherit" sx={{display:"flex",flexDirection:{xs:"column",md:"row"}}}>
+                {/*<Button onClick={AccountClick} color="inherit" sx={{display:"flex",flexDirection:{xs:"column",md:"row"}}}>
                     {active==3 ? <PersonIcon color="primary" sx={{display:{xs:"flex",md:"none"}}}/> : <PersonIcon sx={{display:{xs:"flex",md:"none"}}}/>}
                     {active==3 ? <Typography color="primary">Account</Typography> : <Typography>Account</Typography>}
-                </Button>
+                </Button>*/}
 
             </Toolbar>
         </AppBar>
