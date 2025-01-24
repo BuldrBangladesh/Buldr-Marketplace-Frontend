@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Buldr-Marketplace-Frontend
 
-This project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the frontend for the Buldr Marketplace, built with React and various supporting libraries.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Product Listing**:
+  - Displays a list of products available for purchase.
+  - Uses Material-UI components for a responsive and modern UI.
+  - Fetches product data from a REST API using Axios.
 
-### `npm start`
+- **Product Details**:
+  - Provides detailed information about each product.
+  - Includes images, descriptions, and pricing information.
+  - Allows users to add products to their cart.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Shopping Cart**:
+  - Manages the user's selected products.
+  - Allows users to update quantities and remove items.
+  - Displays the total price and checkout options.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User Authentication**:
+  - Uses Firebase Authentication for user sign-up, login, and account management.
+  - Implements secure authentication flows with JWT tokens.
+  - Stores authentication tokens in local storage for session management.
 
-### `npm test`
+- **Order Management**:
+  - Allows users to view and manage their orders.
+  - Integrates with a payment gateway for processing transactions.
+  - Provides order tracking and status updates.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Responsive Design**:
+  - Uses Material-UI and custom CSS for styling.
+  - Ensures the application is mobile-friendly and responsive.
+  - Implements a grid system and media queries for layout adjustments.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: A JavaScript library for building user interfaces.
+- **Material-UI**: A popular React UI framework for building responsive and modern web applications.
+- **Firebase**: A platform for building web and mobile applications, used here for authentication.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js
+- npm (Node Package Manager)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```sh
+   git clone https://github.com/yourusername/buldr-marketplace-frontend.git
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Navigate to the project directory:
 
-## Learn More
+   ```sh
+   cd buldr-marketplace-frontend
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   npm install
+   ```
 
-### Code Splitting
+### Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Create a `.env` file in the root directory and add the following environment variables:
 
-### Analyzing the Bundle Size
+   ```env
+   REACT_APP_API_URL=your_api_url
+   REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+   REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+   REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Running the Application
 
-### Making a Progressive Web App
+1. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```sh
+   npm start
+   ```
 
-### Advanced Configuration
+2. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Building for Production
 
-### Deployment
+1. Build the application for production:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```sh
+   npm run build
+   ```
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. The build artifacts will be stored in the `build/` directory.
